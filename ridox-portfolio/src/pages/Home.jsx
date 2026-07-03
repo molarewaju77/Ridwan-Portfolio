@@ -11,7 +11,7 @@ import ratioImg from "../assets/projects/ratio.png";
 import spilmateImg from "../assets/projects/spilmate.png";
 import syurImg from "../assets/projects/syur.png";
 
-const projects = [
+export const projects = [
   {
     id: 1,
     title: "Stockertim",
@@ -19,7 +19,8 @@ const projects = [
     description:
       "Designed a Mobile-First Investment Education Platform for Everyday Investors",
     image: stockertimImg,
-    link: "#",
+    slug: "stockertim",
+    link: "/work/stockertim",
   },
   {
     id: 2,
@@ -27,7 +28,8 @@ const projects = [
     year: "2025",
     description: "A Modern Digital Finance Platform for Smart Money Management",
     image: ploverImg,
-    link: "#",
+    slug: "plover",
+    link: "/work/plover",
   },
   {
     id: 3,
@@ -35,7 +37,8 @@ const projects = [
     year: "2025",
     description: "Work in progress - Designing and Development",
     image: bloomingBetImg,
-    link: "#",
+    slug: "betting-platform",
+    link: "/work/betting-platform",
   },
   {
     id: 4,
@@ -44,7 +47,8 @@ const projects = [
     description:
       "An app that allows users to invest and manage their Investment portfolio at a glance.",
     image: syurImg,
-    link: "#",
+    slug: "syur",
+    link: "/work/syur",
   },
   {
     id: 5,
@@ -53,7 +57,8 @@ const projects = [
     description:
       "Designed a web application that provides users with credit scores and enables them to borrow from lenders.",
     image: ballotMoneyImg,
-    link: "#",
+    slug: "ballot-money",
+    link: "/work/ballot-money",
   },
   {
     id: 6,
@@ -62,7 +67,8 @@ const projects = [
     description:
       "Transforming expense sharing among groups of friends, family and colleagues",
     image: ratioImg,
-    link: "#",
+    slug: "ratio",
+    link: "/work/ratio",
   },
   {
     id: 7,
@@ -71,7 +77,8 @@ const projects = [
     description:
       "A convenient movie ticketing app designed for busy individuals, allowing them to book tickets online.",
     image: spilmateImg,
-    link: "#",
+    slug: "spilmate",
+    link: "/work/spilmate",
   },
   {
     id: 8,
@@ -79,7 +86,8 @@ const projects = [
     year: "2023",
     description: "A Revolutionize peer to peer logistics mobile app",
     image: aellprImg,
-    link: "#",
+    slug: "aellpr",
+    link: "/work/aellpr",
   },
 ];
 
