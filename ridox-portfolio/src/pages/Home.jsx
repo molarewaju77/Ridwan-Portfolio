@@ -14,6 +14,15 @@ import syurImg from "../assets/projects/syur.png";
 export const projects = [
   {
     id: 1,
+    title: "Plover",
+    year: "2025",
+    description: "A Modern Digital Finance Platform for Smart Money Management",
+    image: ploverImg,
+    slug: "plover",
+    link: "/work/plover",
+  },
+  {
+    id: 2,
     title: "Stockertim",
     year: "2025",
     description:
@@ -21,15 +30,6 @@ export const projects = [
     image: stockertimImg,
     slug: "stockertim",
     link: "/work/stockertim",
-  },
-  {
-    id: 2,
-    title: "Plover",
-    year: "2025",
-    description: "A Modern Digital Finance Platform for Smart Money Management",
-    image: ploverImg,
-    slug: "plover",
-    link: "/work/plover",
   },
   {
     id: 3,
