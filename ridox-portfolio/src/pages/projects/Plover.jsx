@@ -75,8 +75,8 @@ const Plover = () => {
         <p className="text-[13px] uppercase tracking-widest text-[#8B8A8A] font-medium mb-3">
           Plover
         </p>
-        <h1 className="text-[48px] leading-[1.2] tracking-tight text-[#191919]">
-          {/* <h1 className="text-[28px] md:text-[48px] leading-[1.2] tracking-tight text-[#191919]"> */}
+        {/* <h1 className="text-[48px] leading-[1.2] tracking-tight text-[#191919]"> */}
+        <h1 className="text-[28px] md:text-[48px] leading-[1.2] tracking-tight text-[#191919]">
           <span className="font-normal">Digital Finance Platform</span>{" "}
           <span className="font-normal text-[#8B8A8A]">for Smart Money Management</span>
         </h1>
@@ -108,26 +108,26 @@ const Plover = () => {
       {/* ── SECTION 3: Challenge ── */}
       <div className=" mb-[72px]">
         <h2 className="text-[24px] font-semibold text-[#191919] mb-5">Challenge</h2>
-        <p className="text-[15px] leading-[1.7] text-[#191919] mb-4">
+        <p className="text-[18px] leading-[1.7] text-[#191919] mb-4">
           Digital finance applications have become increasingly feature-rich, but
           many users still struggle with financial visibility and control. During
           preliminary research, several recurring issues emerged.
         </p>
-        <p className="text-[15px] leading-[1.7] text-[#191919] mb-2">
+        <p className="text-[18px] leading-[1.7] text-[#191919] mb-2">
           Users found it difficult to:
         </p>
-        <ul className="list-disc pl-6 space-y-2 text-[15px] leading-[1.7] text-[#191919] mb-2">
+        <ul className="list-disc pl-6 space-y-2 text-[18px] leading-[1.7] text-[#191919] mb-2">
           <li>Track their spending habits effectively</li>
           <li>Understand where their money goes monthly</li>
           <li>Access card management features quickly</li>
           <li>Navigate cluttered finance applications</li>
           <li>Gain meaningful financial insights from transaction history</li>
         </ul>
-        <p className="text-[15px] leading-[1.7] text-[#191919] mb-2">
+        <p className="text-[18px] leading-[1.7] text-[#191919] mb-2">
           Most existing solutions focused heavily on transactions but offered
           limited support for helping users build healthier financial behaviors.
         </p>
-        <p className="text-[15px] leading-[1.7] text-[#191919]">
+        <p className="text-[18px] leading-[1.7] text-[#191919]">
           This created an opportunity to design a product that not only
           facilitates financial transactions but also empowers users to make
           smarter financial decisions.
@@ -139,13 +139,13 @@ const Plover = () => {
         {/* Business Goal */}
         <div>
           <h2 className="text-[24px] font-semibold text-[#191919] mb-4">Business Goal</h2>
-          <p className="text-[15px] leading-[1.7] text-[#191919]">The business goal of Plover was to create a trusted and engaging personal finance platform that encourages users to go beyond basic transactions by providing valuable financial insights, improving long-term retention through daily money management tools, strengthening trust with transparent transaction visibility and accessible card security features, and increasing product adoption by reducing friction across key financial tasks.</p>
+          <p className="text-[18px] leading-[1.7] text-[#191919]">The business goal of Plover was to create a trusted and engaging personal finance platform that encourages users to go beyond basic transactions by providing valuable financial insights, improving long-term retention through daily money management tools, strengthening trust with transparent transaction visibility and accessible card security features, and increasing product adoption by reducing friction across key financial tasks.</p>
         </div>
 
         {/* User Goals */}
         <div>
           <h2 className="text-[24px] font-semibold text-[#191919] mb-4">User Goals</h2>
-          <p className="text-[15px] leading-[1.7] text-[#191919]">The user goal was to provide a seamless and intuitive financial management experience that enables users to easily monitor their account activity, understand their spending habits through clear financial insights, manage their cards with greater control and security, perform essential actions such as transfers and withdrawals quickly, and feel confident in their financial decisions through transparency, accessibility, and real-time visibility into their finances.</p>
+          <p className="text-[18px] leading-[1.7] text-[#191919]">The user goal was to provide a seamless and intuitive financial management experience that enables users to easily monitor their account activity, understand their spending habits through clear financial insights, manage their cards with greater control and security, perform essential actions such as transfers and withdrawals quickly, and feel confident in their financial decisions through transparency, accessibility, and real-time visibility into their finances.</p>
         </div>
       </div>
 
@@ -282,21 +282,21 @@ const Plover = () => {
       {/* ── SECTION 9: Impact ── */}
       <div className=" mb-[40px]">
         <h2 className="text-[24px] font-semibold text-[#191919] mb-5">Impact</h2>
-        <p className="text-[15px] leading-[1.7] text-[#191919] mb-1">
+        <p className="text-[18px] leading-[1.7] text-[#191919] mb-1">
           The designed Plover experience improved how users interact with and
           manage their finances by simplifying access to essential banking
           actions, enhancing financial visibility, and strengthening trust
           through intuitive card controls and transparent financial insights.
         </p>
-        <p className="text-[15px] leading-[1.7] text-[#191919] mb-6">
+        <p className="text-[18px] leading-[1.7] text-[#191919] mb-6">
           By restructuring the information architecture, streamlining user flows,
           and introducing a clean, user-centered interface, I was able to
           create a more engaging and accessible financial management experience.
         </p>
-        <p className="text-[15px] leading-[1.7] text-[#191919] mb-3">
+        <p className="text-[18px] leading-[1.7] text-[#191919] mb-3">
           As a result, the designed product achieved:
         </p>
-        <ul className="list-disc pl-6 space-y-2 text-[15px] leading-[1.7] text-[#191919]">
+        <ul className="list-disc pl-6 space-y-2 text-[18px] leading-[1.7] text-[#191919]">
           <li className="font-semibold">
             35% increase in engagement with financial insights and spending analysis
           </li>

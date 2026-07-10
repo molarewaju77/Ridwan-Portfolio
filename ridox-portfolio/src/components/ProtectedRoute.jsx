@@ -1,22 +1,39 @@
 import React, { useState, useEffect } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useParams } from "react-router-dom";
+import { projects } from "../pages/Home";
 
 const ProtectedRoute = () => {
+  const { slug } = useParams();
   const [isUnlocked, setIsUnlocked] = useState(false);
   const [passcode, setPasscode] = useState("");
   const [error, setError] = useState("");
 
+  // Find the project configuration
+  const project = projects.find((p) => p.slug === slug);
+  const isProjectProtected = project ? project.protected === true : false;
+
   useEffect(() => {
-    const unlocked = sessionStorage.getItem("case_study_unlocked");
+    // If project is not protected, let the user view it directly
+    if (!isProjectProtected) {
+      setIsUnlocked(true);
+      return;
+    }
+
+    // Check project-specific unlock state
+    const unlocked = sessionStorage.getItem(`case_study_unlocked_${slug}`);
     if (unlocked === "true") {
       setIsUnlocked(true);
+    } else {
+      setIsUnlocked(false);
     }
-  }, []);
+  }, [slug, isProjectProtected]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (passcode === "ridwan@#26") {
-      sessionStorage.setItem("case_study_unlocked", "true");
+    // Support per-project passcode or a default fallback passcode
+    const requiredPasscode = (project && project.passcode) || "ridwan@#26";
+    if (passcode === requiredPasscode) {
+      sessionStorage.setItem(`case_study_unlocked_${slug}`, "true");
       setIsUnlocked(true);
       setError("");
     } else {
@@ -24,7 +41,7 @@ const ProtectedRoute = () => {
     }
   };
 
-  if (!isUnlocked) {
+  if (isProjectProtected && !isUnlocked) {
     return (
       <div className="mt-[110px] mb-[120px] max-w-5xl mx-auto px-6 flex flex-col items-center justify-center min-h-[50vh]">
         <div className="max-w-md w-full bg-white border border-[#E5E5E5] rounded-[24px] p-8 md:p-10 shadow-sm transition-all duration-300">

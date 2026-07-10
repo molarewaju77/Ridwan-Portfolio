@@ -20,6 +20,7 @@ export const projects = [
     image: ploverImg,
     slug: "plover",
     link: "/work/plover",
+    protected: false,
   },
   {
     id: 2,
@@ -30,6 +31,7 @@ export const projects = [
     image: stockertimImg,
     slug: "stockertim",
     link: "/work/stockertim",
+    protected: true,
   },
   {
     id: 3,
@@ -39,6 +41,7 @@ export const projects = [
     image: bloomingBetImg,
     slug: "betting-platform",
     link: "/work/betting-platform",
+    protected: true,
   },
   {
     id: 4,
@@ -49,6 +52,7 @@ export const projects = [
     image: syurImg,
     slug: "syur",
     link: "/work/syur",
+    protected: true,
   },
   {
     id: 5,
@@ -59,6 +63,7 @@ export const projects = [
     image: ballotMoneyImg,
     slug: "ballot-money",
     link: "/work/ballot-money",
+    protected: true,
   },
   {
     id: 6,
@@ -69,6 +74,7 @@ export const projects = [
     image: ratioImg,
     slug: "ratio",
     link: "/work/ratio",
+    protected: true,
   },
   {
     id: 7,
@@ -79,6 +85,7 @@ export const projects = [
     image: spilmateImg,
     slug: "spilmate",
     link: "/work/spilmate",
+    protected: true,
   },
   {
     id: 8,
@@ -88,6 +95,7 @@ export const projects = [
     image: aellprImg,
     slug: "aellpr",
     link: "/work/aellpr",
+    protected: true,
   },
 ];
 
@@ -170,24 +178,30 @@ const Home = () => {
 
                 <Link
                   to={project.link}
-                  className="inline-flex items-center gap-1 mt-[12px] text-[14px] font-medium hover:underline"
+                  className="inline-flex items-center gap-1.5 mt-[12px] text-[14px] font-medium hover:underline text-[#191919]"
                 >
                   View project
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 11L11 1M11 1H3M11 1V9"
-                      stroke="black"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  {project.protected ? (
+                    <svg className="w-3.5 h-3.5 text-[#8B8A8A]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                  ) : (
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 11L11 1M11 1H3M11 1V9"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  )}
                 </Link>
               </div>
             </div>
