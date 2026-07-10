@@ -8,10 +8,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Work", path: "/work" },
+    // { name: "Home", path: "/" },
+    { name: "Work", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Resume", path: "/resume" },
+    // { name: "Resume", path: "/resume" },
   ];
 
   useEffect(() => {
@@ -24,11 +24,10 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-500 ease-in-out ${
-        isScrolled || isOpen
-          ? "bg-white/90 backdrop-blur-xl border-b border-gray-100 shadow-2xl shadow-black/5"
-          : "bg-transparent py-2"
-      }`}
+      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-500 ease-in-out ${isScrolled || isOpen
+        ? "bg-white/90 backdrop-blur-xl border-b border-gray-100 shadow-2xl shadow-black/5"
+        : "bg-transparent py-2"
+        }`}
     >
       <nav className="flex items-center justify-between md:px-[121px] px-[24px] h-[80px]">
         {/* Logo */}
@@ -41,10 +40,9 @@ const Navbar = () => {
               key={link.name}
               to={link.path}
               className={({ isActive }) =>
-                `text-[16px] transition-all duration-300 ${
-                  isActive
-                    ? "text-black font-semibold"
-                    : "text-[#8B8A8A] hover:text-black"
+                `text-[16px] transition-all duration-300 ${isActive
+                  ? "text-black font-semibold"
+                  : "text-[#8B8A8A] hover:text-black"
                 }`
               }
             >
@@ -75,9 +73,8 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
-          isOpen ? "max-h-[450px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? "max-h-[450px] opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="flex flex-col items-start px-[24px] gap-6 pb-12 pt-4 bg-white/90 backdrop-blur-xl">
           {navLinks.map((link, index) => (
@@ -87,10 +84,9 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               style={{ transitionDelay: isOpen ? `${index * 70}ms` : "0ms" }}
               className={({ isActive }) =>
-                `text-[16px] transition-all duration-500 transform ${
-                  isOpen
-                    ? "translate-x-0 opacity-100"
-                    : "-translate-x-4 opacity-0"
+                `text-[16px] transition-all duration-500 transform ${isOpen
+                  ? "translate-x-0 opacity-100"
+                  : "-translate-x-4 opacity-0"
                 } ${isActive ? "text-black" : "text-[#8B8A8A]"}`
               }
             >

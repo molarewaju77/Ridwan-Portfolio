@@ -75,7 +75,8 @@ const Plover = () => {
         <p className="text-[13px] uppercase tracking-widest text-[#8B8A8A] font-medium mb-3">
           Plover
         </p>
-        <h1 className="text-[28px] md:text-[48px] leading-[1.2] tracking-tight text-[#191919]">
+        <h1 className="text-[48px] leading-[1.2] tracking-tight text-[#191919]">
+          {/* <h1 className="text-[28px] md:text-[48px] leading-[1.2] tracking-tight text-[#191919]"> */}
           <span className="font-normal">Digital Finance Platform</span>{" "}
           <span className="font-normal text-[#8B8A8A]">for Smart Money Management</span>
         </h1>

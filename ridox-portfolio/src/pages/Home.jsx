@@ -122,7 +122,7 @@ const Home = () => {
           Book a call
         </button>
         {/* Second Button - Circle on small, Pill on large */}
-        <button className="bg-[#F4F4F4] text-[#191919] rounded-[24px] md:rounded-full w-[70px] h-[70px] md:w-auto md:h-auto md:px-8 md:py-5 justify-center flex items-center gap-2 text-[24px] transition-all active:scale-95">
+        <button className=" flex items-center bg-[#F4F4F4] text-[#191919] rounded-[24px] md:rounded-full w-[70px] h-[70px] md:w-auto md:h-auto md:px-8 md:py-5 justify-center flex items-center gap-2 text-[24px] transition-all active:scale-95">
           <svg
             width="18"
             height="21"
@@ -135,7 +135,7 @@ const Home = () => {
               fill="black"
             />
           </svg>
-          <span className="hidden md:inline">Connect with me</span>
+          Connect with me
         </button>
       </div>
       {/* my works div */}
