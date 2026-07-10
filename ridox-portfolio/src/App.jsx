@@ -5,6 +5,7 @@ import Work from "./pages/Work";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
 import ProjectDetails from "./pages/ProjectDetails";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
           <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/work" element={<Work />} />
-            <Route path="/work/:slug" element={<ProjectDetails />} />
+            <Route element={<ProtectedRoute />}>
+              <Route path="/work/:slug" element={<ProjectDetails />} />
+            </Route>
             <Route path="/about" element={<About />} />
             <Route path="/resume" element={<Resume />} />
           </Route>
