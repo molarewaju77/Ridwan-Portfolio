@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AvatarImg from "../assets/ridwan.svg";
 import { Link } from "react-router-dom";
 
@@ -100,11 +100,32 @@ export const projects = [
 ];
 
 const Home = () => {
+  // Attach IntersectionObserver to any element with class "reveal"
+  useEffect(() => {
+    const els = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    els.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="mt-[140px]">
-      <img src={AvatarImg} alt="" className="rounded-[50%]" />
-      <p className="lg:text-[48px] text-[30px]">
-        Hello👋🏼, I’m Ridwan Olukoya, A Product (UX) and Brand Identity Designer
+      {/* Avatar */}
+      <img src={AvatarImg} alt="" className="rounded-[50%] reveal" />
+
+      {/* Hero text */}
+      <p className="lg:text-[48px] text-[30px] reveal" style={{ transitionDelay: "80ms" }}>
+        Hello<span className="wave-emoji">👋🏼</span>, I'm Ridwan Olukoya, A Product (UX) and Brand Identity Designer
         .
         <span className="text-[#8B8A8A]">
           {" "}
@@ -113,7 +134,8 @@ const Home = () => {
         </span>
       </p>
 
-      <div className="flex gap-5 mt-[34px] items-center">
+      {/* Buttons */}
+      <div className="flex gap-5 mt-[34px] items-center reveal" style={{ transitionDelay: "160ms" }}>
         <button className=" bg-[#191919] text-white rounded-full px-[20px] py-[20px] flex items-center gap-2 text-[24px] ">
           <svg
             width="18"
@@ -146,13 +168,18 @@ const Home = () => {
           <span className="hidden md:inline">Connect with me</span>
         </button>
       </div>
-      {/* my works div */}
+
+      {/* My work section */}
       <div className="mt-[80px] mb-[120px]">
-        <h2 className="text-[32px] mb-[32px]">My work</h2>
+        <h2 className="text-[32px] mb-[32px] reveal" style={{ transitionDelay: "0ms" }}>My work</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[20px] gap-y-[48px]">
-          {projects.map((project) => (
-            <div key={project.id} className="flex flex-col">
+          {projects.map((project, index) => (
+            <div
+              key={project.id}
+              className="flex flex-col reveal"
+              style={{ transitionDelay: `${index * 80}ms` }}
+            >
               {/* Image Container */}
               <Link to={project.link} className="rounded-[12px] overflow-hidden bg-[#F4F4F4] block cursor-pointer">
                 <img
