@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import RidoxLogo from "../assets/RidoxLogo.svg";
 
 const Navbar = () => {
@@ -30,7 +30,9 @@ const Navbar = () => {
     >
       <nav className="flex items-center justify-between md:px-[121px] px-[24px] h-[60px]">
         {/* Logo */}
-        <img src={RidoxLogo} alt="Ridox Logo" className="h-8 w-auto" />
+        <Link to="/">
+          <img src={RidoxLogo} alt="Ridox Logo" className="h-8 w-auto" />
+        </Link>
 
         {/* Desktop Links */}
         <div className="hidden md:flex gap-[40px]">
