@@ -174,11 +174,10 @@ const Home = () => {
         <h2 className="text-[32px] mb-[32px] reveal" style={{ transitionDelay: "0ms" }}>My work</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[20px] gap-y-[48px]">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div
               key={project.id}
-              className="flex flex-col reveal"
-              style={{ transitionDelay: `${index * 80}ms` }}
+              className="flex flex-col"
             >
               {/* Image Container */}
               <Link to={project.link} className="rounded-[12px] overflow-hidden bg-[#F4F4F4] block cursor-pointer">

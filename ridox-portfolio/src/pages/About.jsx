@@ -38,13 +38,48 @@ const About = () => {
       </div>
 
       {/* Email & Copy Button */}
-      <div className="mt-[32px] mb-[64px] flex items-center gap-2 text-[18px] md:text-[20px]">
+      <div className="mt-[32px] mb-[64px] flex items-center gap-[8px] text-[18px] md:text-[20px]">
         <span className="text-[#8B8A8A]">ridorolukoya@gmail.com</span>
         <button
           onClick={handleCopy}
-          className="text-[#0066FF] hover:underline transition-all cursor-pointer font-medium"
+          title={copied ? "Copied!" : "Copy email"}
+          className="relative group flex items-center justify-center w-8 h-8 rounded-lg bg-[#F4F4F4] hover:bg-[#E8E8E8] transition-all duration-200 cursor-pointer"
         >
-          {copied ? "copied!" : "copy"}
+          {copied ? (
+            /* Check icon */
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#22c55e"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          ) : (
+            /* Modern copy icon — two overlapping rounded squares */
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#8B8A8A"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="group-hover:stroke-[#191919] transition-colors duration-200"
+            >
+              <rect x="8" y="8" width="12" height="12" rx="2" />
+              <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" />
+            </svg>
+          )}
+          {/* Tooltip */}
+          <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-[#191919] text-white text-[11px] px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+            {copied ? "Copied!" : "Copy email"}
+          </span>
         </button>
       </div>
 
