@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react";
 import RidoxLogo from "../assets/RidoxLogo.svg";
 
 const Navbar = () => {
@@ -29,7 +28,7 @@ const Navbar = () => {
         : "bg-transparent py-2"
         }`}
     >
-      <nav className="flex items-center justify-between md:px-[121px] px-[24px] h-[80px]">
+      <nav className="flex items-center justify-between md:px-[121px] px-[24px] h-[60px]">
         {/* Logo */}
         <img src={RidoxLogo} alt="Ridox Logo" className="h-8 w-auto" />
 
@@ -41,7 +40,7 @@ const Navbar = () => {
               to={link.path}
               className={({ isActive }) =>
                 `text-[16px] transition-all duration-300 ${isActive
-                  ? "text-black font-semibold"
+                  ? "text-black"
                   : "text-[#8B8A8A] hover:text-black"
                 }`
               }
@@ -53,21 +52,42 @@ const Navbar = () => {
 
         {/* Mobile Toggle Button */}
         <button
-          className="md:hidden p-2 text-black transition-transform duration-300 active:scale-90 focus:outline-none"
+          className="md:hidden p-2 text-black transition-transform duration-300 active:scale-95 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Menu"
         >
-          <div className="relative w-6 h-6">
-            <div
-              className={`absolute inset-0 transition-all duration-500 transform ${isOpen ? "rotate-90 opacity-0" : "rotate-0 opacity-100"}`}
+          {isOpen ? (
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-6 h-6 text-[#191919] transform rotate-90 transition-transform duration-300"
             >
-              <Menu size={24} />
-            </div>
-            <div
-              className={`absolute inset-0 transition-all duration-500 transform ${isOpen ? "rotate-0 opacity-100" : "-rotate-90 opacity-0"}`}
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          ) : (
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-6 h-6 text-[#191919] transition-transform duration-300"
             >
-              <X size={24} />
-            </div>
-          </div>
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="8" y1="12" x2="20" y2="12" />
+              <line x1="12" y1="18" x2="20" y2="18" />
+            </svg>
+          )}
         </button>
       </nav>
 

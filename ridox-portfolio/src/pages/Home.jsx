@@ -23,11 +23,22 @@ export const projects = [
     protected: false,
   },
   {
+    id: 5,
+    title: "Ballot Money",
+    year: "2023",
+    description:
+      "Empowering Users with Seamless Credit Access",
+    image: ballotMoneyImg,
+    slug: "ballot-money",
+    link: "/work/ballot-money",
+    protected: true,
+  },
+  {
     id: 2,
     title: "Stockertim",
     year: "2025",
     description:
-      "Designed a Mobile-First Investment Education Platform for Everyday Investors",
+      "Investment Education Platform for Everyday Investors",
     image: stockertimImg,
     slug: "stockertim",
     link: "/work/stockertim",
@@ -35,9 +46,9 @@ export const projects = [
   },
   {
     id: 3,
-    title: "betting platform",
+    title: "BLOOMINGBET",
     year: "2025",
-    description: "Work in progress - Designing and Development",
+    description: "Redefining the Sports Betting Experience",
     image: bloomingBetImg,
     slug: "betting-platform",
     link: "/work/betting-platform",
@@ -48,43 +59,10 @@ export const projects = [
     title: "Syur",
     year: "2023",
     description:
-      "An app that allows users to invest and manage their Investment portfolio at a glance.",
+      "Simplifying Investment Portfolio Management",
     image: syurImg,
     slug: "syur",
     link: "/work/syur",
-    protected: true,
-  },
-  {
-    id: 5,
-    title: "Ballot Money",
-    year: "2023",
-    description:
-      "Designed a web application that provides users with credit scores and enables them to borrow from lenders.",
-    image: ballotMoneyImg,
-    slug: "ballot-money",
-    link: "/work/ballot-money",
-    protected: true,
-  },
-  {
-    id: 6,
-    title: "Ratio",
-    year: "2025",
-    description:
-      "Transforming expense sharing among groups of friends, family and colleagues",
-    image: ratioImg,
-    slug: "ratio",
-    link: "/work/ratio",
-    protected: true,
-  },
-  {
-    id: 7,
-    title: "Spilmate",
-    year: "2023",
-    description:
-      "A convenient movie ticketing app designed for busy individuals, allowing them to book tickets online.",
-    image: spilmateImg,
-    slug: "spilmate",
-    link: "/work/spilmate",
     protected: true,
   },
   {
@@ -97,6 +75,28 @@ export const projects = [
     link: "/work/aellpr",
     protected: true,
   },
+  // {
+  //   id: 6,
+  //   title: "Ratio",
+  //   year: "2025",
+  //   description:
+  //     "Transforming expense sharing among groups of friends, family and colleagues",
+  //   image: ratioImg,
+  //   slug: "ratio",
+  //   link: "/work/ratio",
+  //   protected: true,
+  // },
+  // {
+  //   id: 7,
+  //   title: "Spilmate",
+  //   year: "2023",
+  //   description:
+  //     "A convenient movie ticketing app designed for busy individuals, allowing them to book tickets online.",
+  //   image: spilmateImg,
+  //   slug: "spilmate",
+  //   link: "/work/spilmate",
+  //   protected: true,
+  // },
 ];
 
 const Home = () => {
@@ -154,31 +154,27 @@ const Home = () => {
           {projects.map((project) => (
             <div key={project.id} className="flex flex-col">
               {/* Image Container */}
-              <div className="rounded-[12px] overflow-hidden bg-[#F4F4F4]">
+              <Link to={project.link} className="rounded-[12px] overflow-hidden bg-[#F4F4F4] block cursor-pointer">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
                 />
-              </div>
+              </Link>
 
               {/* Project Info */}
               <div className="mt-[16px]">
-                <div className="flex items-center gap-2 text-[14px] text-[#8B8A8A] uppercase tracking-wider">
-                  <span className="font-semibold text-black">
-                    {project.title}
-                  </span>
-                  <span>/</span>
-                  <span>{project.year}</span>
-                </div>
+                <span className="text-[16px] font-normal text-black uppercase">
+                  {project.title}
+                </span>
 
-                <p className="mt-[8px] text-[18px] text-[#191919] leading-tight">
+                <p className="mt-[8px] text-[20px] font-normal text-[#8B8A8A] leading-tight">
                   {project.description}
                 </p>
 
                 <Link
                   to={project.link}
-                  className="inline-flex items-center gap-1.5 mt-[12px] text-[14px] font-medium hover:underline text-[#191919]"
+                  className="inline-flex items-center gap-1.5 mt-[12px] text-[16px] font-normal hover:underline text-[#191919]"
                 >
                   View project
                   {project.protected ? (
