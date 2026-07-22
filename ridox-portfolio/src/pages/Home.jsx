@@ -136,7 +136,10 @@ const Home = () => {
 
       {/* Buttons */}
       <div className="flex gap-5 mt-[34px] items-center reveal" style={{ transitionDelay: "160ms" }}>
-        <button className=" bg-[#191919] text-white rounded-full px-[20px] py-[20px] flex items-center gap-2 text-[24px] ">
+        <button 
+          onClick={() => window.open("https://cal.com/ridor/60min", "_blank")}
+          className=" bg-[#191919] text-white rounded-full px-[20px] py-[20px] flex items-center gap-2 text-[24px] "
+        >
           <svg
             width="18"
             height="12"
@@ -152,7 +155,10 @@ const Home = () => {
           Book a call
         </button>
         {/* Second Button - Circle on small, Pill on large */}
-        <button className=" flex bg-[#F4F4F4] text-[#191919] rounded-[24px] md:rounded-full w-[70px] h-[70px] md:w-auto md:h-auto md:px-8 md:py-5 justify-center flex items-center gap-2 text-[24px] transition-all active:scale-95">
+        <button 
+          onClick={() => window.open("https://www.linkedin.com/in/ridwan-olukoya-aa6ba4179/", "_blank")}
+          className=" flex bg-[#F4F4F4] text-[#191919] rounded-[24px] md:rounded-full w-[70px] h-[70px] md:w-auto md:h-auto md:px-8 md:py-5 justify-center flex items-center gap-2 text-[24px] transition-all active:scale-95"
+        >
           <svg
             width="18"
             height="21"

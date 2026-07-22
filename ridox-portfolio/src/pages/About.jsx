@@ -25,7 +25,7 @@ const About = () => {
           I am a multidisciplinary designer with over 7 years of experience in the design industry.
           My career journey began in graphic and print design, where I developed a strong foundation in
           visual communication and brand storytelling. Over time, I transitioned into Brand Identity
-          design, expanded into frontend development, and eventually specialized in product/ux design.
+          design, expanded into  e-learning development, and eventually specialized in product/ux design.
         </p>
         <p>
           With a strong eye for detail and a passion for creativity, I create experiences that
