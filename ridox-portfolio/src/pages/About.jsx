@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import aboutImg1 from "../assets/projects/image.png";
+import aboutImg2 from "../assets/projects/image copy.png";
 import ridoxImg from "../assets/ridox.png";
 
 const About = () => {
@@ -14,6 +16,12 @@ const About = () => {
 
   return (
     <div className="mt-[100px] mb-[120px] mx-auto px-4 md:px-[60px]">
+      {/* Top Images */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] mb-[48px]">
+        <img src={aboutImg1} alt="About 1" className="w-full h-auto object-cover rounded-[16px]" />
+        <img src={aboutImg2} alt="About 2" className="w-full h-auto object-cover rounded-[16px]" />
+      </div>
+
       {/* Title */}
       <h1 className="text-[40px] md:text-[40px] font-[400] text-[#191919] mb-[28px] tracking-tight">
         About me
